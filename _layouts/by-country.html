@@ -14,7 +14,7 @@ layout: default
       <ul class="list-group">
         {% for job in site.tags[country] %}
         <li class="list-group-item">
-          <h4><a href="{{job.url}}">{{job.title}}</a></h4>
+          <h4><a href="{{site.baseurl}}{{job.url}}">{{job.title}}</a></h4>
           <p><i class="fa fa-map-marker"></i> {{job.city}} - <i class="fa fa-suitcase"></i> {{job.category}}</p>
         </li>
         {% endfor %}

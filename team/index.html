@@ -13,7 +13,7 @@ layout: default
       <ul class="list-unstyled job-listing">
         {% for category in site.categories %}
         <li class="job-listing-team">
-          <h3>{{category[0]}}</h3>
+          <h3>{{category[0] | capitalize}}</h3>
           <ul class="list-group">
             {% for job in category[1] %}
             <li class="list-group-item">
