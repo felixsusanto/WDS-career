@@ -19,7 +19,7 @@ layout: default
           <ul class="list-group">
             {% for location in tag[1] %}
             <li class="list-group-item">
-              <h4><a href="{{location.url}}">{{location.title}}</a></h4>
+              <h4><a href="{{site.baseurl}}/{{location.url}}">{{location.title}}</a></h4>
               <!-- <a href="{{location.url}}" class="btn btn-sm btn-primary pull-right">Apply</a> -->
               <p><i class="fa fa-map-marker"></i> {{location.city}} - <i class="fa fa-suitcase"></i> {{location.category}}</p>
             </li>
