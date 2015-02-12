@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<div class="container-fluid mw">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>{{page.title}}</h1>
+      <p class="lead">
+        <a href="{{site.baseurl}}/team">
+          <i class="fa fa-suitcase"></i> {{page.category}}
+        </a>
+        -
+        <a href="{{site.baseurl}}/location">
+          <i class="fa fa-map-marker"></i> {{page.city}}, {{page.tag}}
+        </a>
+      </p>
+      <hr>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+  <div class="row">
+    <div class="col-sm-8">
+      {{content}}
+      <br>
+    </div><!-- /.span -->
+    <div class="col-sm-4">
+      <div>
+        <a href="#" class="btn btn-lg btn-primary">Apply for this job <i class="fa fa-chevron-circle-right"></i></a>
+      </div>
+      <br>
+      <div class="embed-responsive embed-responsive-16by9">
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/p1dei7LqTY0" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+  <div class="row">
+    <div class="col-xs-12">
+      {% include info.html %}
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+</div><!-- /.container -->

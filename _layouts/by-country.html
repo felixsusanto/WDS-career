@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+{% assign country = page.country %}
+<div class="container-fluid mw">
+  
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Openings in {{page.country}}</h1>
+      
+      <p class="lead">{{page.content}}</p>
+      
+      <ul class="list-group">
+        {% for job in site.tags[country] %}
+        <li class="list-group-item">
+          <h4><a href="{{job.url}}">{{job.title}}</a></h4>
+          <p><i class="fa fa-map-marker"></i> {{job.city}} - <i class="fa fa-suitcase"></i> {{job.category}}</p>
+        </li>
+        {% endfor %}
+      </ul>
+
+      {% include info.html %}
+
+    </div><!--/.span-->
+  </div><!--/.row--> 
+</div><!--/.container-->

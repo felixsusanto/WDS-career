@@ -1,0 +1,22 @@
+---
+- departments:
+  - team: Administration
+  - team: Accounting/Finance
+  - team: Customer Service
+  - team: Executive
+  - team: Management
+  - team: Human Resources
+  - team: Information Technology
+  - team: Legal
+  - team: Marketing
+  - team: Operations
+  - team: Sales
+
+- branches:
+  - {country: Australia, cities: [Sydney, Wollongong, Perth]}
+  - {country: India, cities: [Bangalore]}
+  - {country: New Zealand, cities: [Auckland]}
+  - {country: United Kingdom, cities: [Poole, London]}
+  - {country: Singapore, cities: [Singapore]}
+  - {country: South Africa, cities: [Johannesburg]}
+  - {country: United States, cities: [Kirkland, Kansas City, Dallas/Fort Worth, Redmond]}

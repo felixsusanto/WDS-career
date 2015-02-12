@@ -1,0 +1,73 @@
+@import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../bower_components/fontawesome/scss/font-awesome.scss";
+
+.carousel{
+  img{
+    width:100%;
+  }
+  .fa{
+    position:absolute;
+    top:50%;
+  }
+}
+
+.mw{
+  max-width:960px;
+  position:relative;
+}
+
+.grid-container{
+  $color: rgba(255,0,0,0.05);
+  position:absolute;
+  width: 100%;
+  .grid{
+    text-align: center;
+    outline:1px solid $color;
+    background: $color;
+    background-clip:content-box;
+    height:100vh;
+  }
+}
+
+.job-listing{
+  .job-listing-items{
+    >li{
+      padding-left:20px;
+      padding-bottom:10px;
+      margin-bottom: 20px;
+      border-bottom:1px solid #ddd;
+      >h4{
+        margin-bottom:5px;
+      }
+    }
+  }
+}
+
+.job-listing-team{
+  &+.job-listing-team{
+    margin-top:40px;
+  }
+}
+
+.info{
+  ul{
+    padding-left:20px;
+  }
+  h3{
+    margin-top:0;
+  }
+  p{
+    padding-bottom:30px;
+  }
+  padding:30px 20px; 
+  background:#fafafa; 
+}
+
+footer{
+  background:#f8f8f8;
+  border-top: 1px solid #e7e7e7;
+  padding:30px 0; 
+  h2{
+    margin-top:0;
+  }
+}

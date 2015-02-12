@@ -1,0 +1,3 @@
+markdown: redcarpet
+baseurl: /WDS-career
+exclude: [bower_components, node_modules]
