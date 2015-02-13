@@ -19,12 +19,19 @@ layout: default
       <hr>
       {% include country-dropdown.html %}
 
-      <ul class="list-group">
+      <ul class="list-group job-list">
         {% for job in site.posts %}
           {% if job.country == country %}
             <li class="list-group-item">
               <h4><a href="{{site.baseurl}}{{job.url}}">{{job.title}}</a></h4>
-              <p><i class="fa fa-suitcase"></i> {{job.team}}, <i class="fa fa-map-marker"></i> {{job.city}}</p>
+              <p>
+                <span class="nowrap">
+                  <i class="fa fa-fw fa-suitcase"></i> {{job.team}}
+                </span>
+                <span class="nowrap">
+                  <i class="fa fa-fw fa-map-marker"></i> {{job.city}}
+                </span>
+              </p>
             </li>
           {% endif %}
         {% endfor %}

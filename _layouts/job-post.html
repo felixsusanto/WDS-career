@@ -21,17 +21,21 @@ layout: default
         {% endfor %}
 
         <li><a href="{{site.baseurl}}/">Home</a></li>
-        <li><a href="{{site.baseurl}}/location">Current Openings</a></li>
-        <li><a href="{{site.baseurl}}/location/{{countryUrl}}">{{page.country}}</a></li>
-        <li><a href="{{site.baseurl}}/team/{{teamUrl}}">{{page.team}}</a></li>
+        <li><a href="{{site.baseurl}}/location">All Openings</a></li>
+        <li class="hidden-xs"><a href="{{site.baseurl}}/location/{{countryUrl}}">{{page.country}}</a></li>
+        <li class="hidden-xs"><a href="{{site.baseurl}}/team/{{teamUrl}}">{{page.team}}</a></li>
         <li class="active">{{page.title}}</li>
       </ol>
 
       <h1>{{page.title}}</h1>
       <p class="lead text-muted">
-        <i class="fa fa-suitcase"></i> {{page.team}}
-        -
-        <i class="fa fa-map-marker"></i> {{page.city}}, {{page.country}}
+        <span class="nowrap">
+          <i class="fa fa-fw fa-suitcase"></i> {{page.team}}
+        </span>
+        <span class="nowrap">
+          <i class="fa fa-fw fa-map-marker"></i> {{page.city}}, {{page.country}}
+        </span>
+        
       </p>
       <hr>
     </div><!-- /.span -->

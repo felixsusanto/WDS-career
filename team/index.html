@@ -32,12 +32,12 @@ layout: default
         {%if teamMatch %}
           <li>
             <h3>{{data.team}}</h3>
-            <ul class="list-group">
+            <ul class="list-group job-list">
               {% for post in site.posts %}
                 {% if post.team == {{data.team}} %}
                 <li class="list-group-item">
                   <h4><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h4>
-                  <p><i class="fa fa-map-marker"></i> {{post.country}}, {{post.city}}</p>
+                  <p class="nowrap"><i class="fa fa-map-marker"></i> {{post.country}}, {{post.city}}</p>
                 </li>
                 {% endif %}
               {% endfor %}

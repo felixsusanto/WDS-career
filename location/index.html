@@ -34,12 +34,17 @@ layout: default
         {%if countryMatch %}
           <li>
             <h3>{{data.country}}</h3>
-            <ul class="list-group">
+            <ul class="list-group job-list">
               {% for post in site.posts %}
                 {% if post.country == {{data.country}} %}
                 <li class="list-group-item">
                   <h4><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h4>
-                  <p><i class="fa fa-suitcase"></i> {{post.team}}, <i class="fa fa-map-marker"></i> {{post.city}}</p>
+                  <p>
+                      <i class="fa fa-fw fa-suitcase"></i> {{post.team}}
+                    <span class="nowrap"> 
+                      <i class="fa fa-fw fa-map-marker"></i> {{post.city}}
+                    </span>
+                  </p>
                 </li>
                 {% endif %}
               {% endfor %}
