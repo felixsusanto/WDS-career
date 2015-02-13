@@ -23,7 +23,7 @@ layout: default
         {% for job in site.posts %}
           {% if job.team == team %}
             <li class="list-group-item">
-              <h4><a href="{{site.baseurl}}{{job.url}}">{{job.title}}</a></h4>
+              <h4><a href="{{site.baseurl}}/{{job.url}}">{{job.title}}</a></h4>
               <p><i class="fa fa-map-marker"></i> {{job.country}}, {{job.city}}</p>
             </li>
           {% endif %}
