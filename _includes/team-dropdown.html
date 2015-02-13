@@ -1,0 +1,29 @@
+<div>
+<div class="dropdown" style="display:inline-block;">
+  <button class="btn btn-default dropdown-toggle" type="button" id="teamDropdown" data-toggle="dropdown" aria-expanded="true">
+    Team
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="teamDropdownMenu">
+    {% for data in site.data.teams %}
+      {% for job in site.posts %}
+        {%if job.team == {{data.team}} %}
+          {% assign teamMatch = true %}
+          {% break %}
+        {% else %}
+          {% assign teamMatch = false %}
+        {% endif %}
+      {% endfor %}
+
+      {%if teamMatch %}
+        <li><a href="{{site.baseurl}}{{data.url}}">{{data.team}}</a></li>
+      {% endif %}
+    {% endfor %}
+    <li class="divider"></li>
+    <li><a href="{{site.baseurl}}/team">All teams</a></li>
+  </ul>
+</div>
+
+<a href="{{site.baseurl}}/location" class="btn btn-default">Browse by Location</a>
+</div>
+<br>

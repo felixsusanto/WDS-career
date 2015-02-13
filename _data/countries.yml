@@ -1,0 +1,8 @@
+---
+- {country: Australia     , url: au.html}
+- {country: India         , url: in.html}
+- {country: New Zealand   , url: nz.html}
+- {country: Singapore     , url: sg.html}
+- {country: South Africa  , url: za.html}
+- {country: United Kingdom, url: uk.html}
+- {country: United States , url: us.html}

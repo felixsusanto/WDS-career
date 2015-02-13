@@ -1,0 +1,29 @@
+<div>
+<div class="dropdown" style="display:inline-block;">
+  <button class="btn btn-default dropdown-toggle" type="button" id="locationDropdown" data-toggle="dropdown" aria-expanded="true">
+    Country
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="locationDropdownMenu">
+    {% for data in site.data.countries %}
+      {% for job in site.posts %}
+        {%if job.country == {{data.country}} %}
+          {% assign countryMatch = true %}
+          {% break %}
+        {% else %}
+          {% assign countryMatch = false %}
+        {% endif %}
+      {% endfor %}
+
+      {%if countryMatch %}
+        <li><a href="{{site.baseurl}}{{data.url}}">{{data.country}}</a></li>
+      {% endif %}
+    {% endfor %}
+    <li class="divider"></li>
+    <li><a href="{{site.baseurl}}/location">All countries</a></li>
+  </ul>
+</div>
+
+<a href="{{site.baseurl}}/team" class="btn btn-default">Browse by Team</a>
+</div>
+<br>

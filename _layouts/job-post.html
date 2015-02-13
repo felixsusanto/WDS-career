@@ -4,15 +4,33 @@ layout: default
 <div class="container-fluid mw">
   <div class="row">
     <div class="col-xs-12">
+      <ol class="breadcrumb">
+        {% for data in site.data.teams%}
+          {% if data.team == {{page.team}} %}
+            {% assign teamUrl = data.url %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        
+        {% for data in site.data.countries%}
+          {% if data.country == {{page.country}} %}
+            {% assign countryUrl = data.url %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        <li><a href="{{site.baseurl}}/">Home</a></li>
+        <li><a href="{{site.baseurl}}/location">Current Openings</a></li>
+        <li><a href="{{site.baseurl}}/location/{{countryUrl}}">{{page.country}}</a></li>
+        <li><a href="{{site.baseurl}}/team/{{teamUrl}}">{{page.team}}</a></li>
+        <li class="active">{{page.title}}</li>
+      </ol>
+
       <h1>{{page.title}}</h1>
-      <p class="lead">
-        <a href="{{site.baseurl}}/team">
-          <i class="fa fa-suitcase"></i> {{page.category}}
-        </a>
+      <p class="lead text-muted">
+        <i class="fa fa-suitcase"></i> {{page.team}}
         -
-        <a href="{{site.baseurl}}/location">
-          <i class="fa fa-map-marker"></i> {{page.city}}, {{page.tag}}
-        </a>
+        <i class="fa fa-map-marker"></i> {{page.city}}, {{page.country}}
       </p>
       <hr>
     </div><!-- /.span -->

@@ -6,27 +6,49 @@ layout: default
   
   <div class="row">
     <div class="col-xs-12">
-      <h1>By Location</h1>
+      <ol class="breadcrumb">
+        <li><a href="{{site.baseurl}}/">Home</a></li>
+        <li class="active">Browse by Location</li>
+      </ol>
+
+      <h1>Openings by location</h1>
       
       <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quisquam deleniti voluptatibus error et veritatis delectus, harum. Animi obcaecati earum consequuntur officiis, facilis distinctio expedita cumque ratione ea natus quidem.</p>
       
       <hr>
 
-      <ul class="list-unstyled job-listing">
-        {% for tag in site.tags %}
-        <li class="job-listing-team">
-          <h3><a href="sg.html">{{tag[0] | capitalize}}</a></h3>
-          <ul class="list-group">
-            {% for location in tag[1] %}
-            <li class="list-group-item">
-              <h4><a href="{{site.baseurl}}{{location.url}}">{{location.title}}</a></h4>
-              <!-- <a href="{{location.url}}" class="btn btn-sm btn-primary pull-right">Apply</a> -->
-              <p><i class="fa fa-map-marker"></i> {{location.city}} - <i class="fa fa-suitcase"></i> {{location.category}}</p>
-            </li>
-            {% endfor %}
-          </ul>
-        </li>
+      {% include country-dropdown.html %}
+      
+      <ul class="list-unstyled">
+      {% for data in site.data.countries %}
+
+        {% for job in site.posts %}
+          {%if job.country == {{data.country}} %}
+            {% assign countryMatch = true %}
+            {% break %}
+          {% else %}
+            {% assign countryMatch = false %}
+          {% endif %}
         {% endfor %}
+
+        {%if countryMatch %}
+          <li>
+            <h3>{{data.country}}</h3>
+            <ul class="list-group">
+              {% for post in site.posts %}
+                {% if post.country == {{data.country}} %}
+                <li class="list-group-item">
+                  <h4><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h4>
+                  <p><i class="fa fa-suitcase"></i> {{post.team}}, <i class="fa fa-map-marker"></i> {{post.city}}</p>
+                </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </li>
+        {% endif %}
+        
+      {% endfor %}
+      
       </ul>
 
       {% include info.html %}

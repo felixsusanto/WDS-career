@@ -1,8 +1,9 @@
 ---
 title: Technical Account Manager
-category: Account Management
+team: Management
 city: San Fransisco
-tag: United States
+country: United States
+categories: [location, san-fransisco]
 layout: job-post
 ---
 

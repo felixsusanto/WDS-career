@@ -2,29 +2,29 @@
 layout: default
 ---
 
-{% assign country = page.country %}
+{% assign team = page.team %}
 <div class="container-fluid mw">
   
   <div class="row">
     <div class="col-xs-12">
       <ol class="breadcrumb">
         <li><a href="{{site.baseurl}}/">Home</a></li>
-        <li><a href="{{site.baseurl}}/location">Browse by Location</a></li>
-        <li class="active">{{page.country}}</li>
+        <li><a href="{{site.baseurl}}/team">Browse by Team</a></li>
+        <li class="active">{{page.team}}</li>
       </ol>
 
-      <h1>Openings in {{page.country}}</h1>
+      <h1>Openings in {{team}}</h1>
       
       <p class="lead">{{page.content}}</p>
       <hr>
-      {% include country-dropdown.html %}
+      {% include team-dropdown.html %}
 
       <ul class="list-group">
         {% for job in site.posts %}
-          {% if job.country == country %}
+          {% if job.team == team %}
             <li class="list-group-item">
               <h4><a href="{{site.baseurl}}{{job.url}}">{{job.title}}</a></h4>
-              <p><i class="fa fa-suitcase"></i> {{job.team}}, <i class="fa fa-map-marker"></i> {{job.city}}</p>
+              <p><i class="fa fa-map-marker"></i> {{job.country}}, {{job.city}}</p>
             </li>
           {% endif %}
         {% endfor %}

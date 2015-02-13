@@ -1,6 +1,23 @@
+@import "compass";
+@import "_font-foco.scss";
+@import "_variables.scss";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "../bower_components/fontawesome/scss/font-awesome.scss";
 
+.wds-logo{
+  height:54px;
+  position:relative;
+  top:-6px;
+}
+
+.navbar{
+  margin-bottom:0;
+}
+.navbar-nav{
+  >li>a{
+    line-height: 43px;
+  }
+}
 .carousel{
   img{
     width:100%;
@@ -16,6 +33,28 @@
   position:relative;
 }
 
+.jumbo{
+  
+
+  &.jumbo-top{
+    background:url(../img/ofc-06.jpg) center center no-repeat;
+    color:#fff;
+    @include text-shadow(0 2px 5px black);
+    background-size:cover;
+    padding-top:20%;
+    padding-bottom:50px;
+    .btn{
+      @include text-shadow(none);
+    }
+  }
+  &.jumbo-two{
+    background:url(../img/img-07.png) center bottom no-repeat;
+    background-size:cover;
+    padding-top:50px;
+    padding-bottom:30%;
+  }
+}
+
 .grid-container{
   $color: rgba(255,0,0,0.05);
   position:absolute;
@@ -26,26 +65,6 @@
     background: $color;
     background-clip:content-box;
     height:100vh;
-  }
-}
-
-.job-listing{
-  .job-listing-items{
-    >li{
-      padding-left:20px;
-      padding-bottom:10px;
-      margin-bottom: 20px;
-      border-bottom:1px solid #ddd;
-      >h4{
-        margin-bottom:5px;
-      }
-    }
-  }
-}
-
-.job-listing-team{
-  &+.job-listing-team{
-    margin-top:40px;
   }
 }
 
