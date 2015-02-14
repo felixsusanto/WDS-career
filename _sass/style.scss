@@ -10,6 +10,24 @@
   top:-6px;
 }
 
+a:hover{
+  text-decoration: none;
+}
+
+.map-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  #map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .social-widget{
   $dimension: 1.7em;
   $color1:#3498db;
@@ -131,7 +149,8 @@
     padding-bottom:30px;
   }
   padding:30px 20px; 
-  background:#fafafa; 
+  background:#f8f8f8;
+  border:1px solid #e7e7e7; 
 }
 
 footer{

@@ -3,7 +3,7 @@ title: Graphic Designer
 team: Information Technology
 city: Sydney
 country: Australia
-categories: [location, sydney]
+categories: [location, au, sydney]
 layout: job-post
 ---
 

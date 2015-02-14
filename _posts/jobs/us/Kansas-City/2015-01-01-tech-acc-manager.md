@@ -1,9 +1,9 @@
 ---
 title: Technical Account Manager
 team: Management
-city: San Fransisco
+city: Kansas City
 country: United States
-categories: [location, san-fransisco]
+categories: [location, us, kansas-city]
 layout: job-post
 ---
 

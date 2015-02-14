@@ -3,7 +3,7 @@ title: Graphic Designer
 team: Information Technology
 city: Singapore
 country: Singapore
-categories: [location, singapore]
+categories: [location, sg]
 layout: job-post
 ---
 

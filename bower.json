@@ -1,0 +1,26 @@
+{
+  "name": "WDS-career",
+  "version": "0",
+  "homepage": "https://github.com/felixsusanto/WDS-career",
+  "authors": [
+    "Felix Susanto <felix.susanto2000@gmail.com>"
+  ],
+  "description": "WDS-career site",
+  "main": "index.html",
+  "keywords": [
+    "wds"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fontawesome": "~4.3.0",
+    "bootstrap-sass": "~3.3.3"
+  }
+}
