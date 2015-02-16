@@ -9,9 +9,67 @@
   position:relative;
   top:-6px;
 }
-
+.nav-footer{
+  text-align: center;
+  >li{
+    float:none;
+    display:inline-block;
+  }
+}
 a:hover{
   text-decoration: none;
+}
+
+.team-icon-container{
+  display:inline-block;
+  width: 470px;
+  text-align: left;
+  >li{
+    width:235px;
+    height:195px;
+    display:inline-block;
+    vertical-align: top;
+    text-align: center;
+    float:left;
+    >a{
+      font-size: 18px;
+      text-transform: uppercase;
+      >span{
+        display:block;
+      }
+    }
+  }
+  @media(max-width:500px){
+    display:block;
+    width: 100%;
+    >li{
+      width: auto;
+      height: auto;
+      display:block;
+      float:none;
+      text-align: left;
+      padding: 5px 15px;
+      >a{
+        text-transform: none;
+        >img{
+          height:65px;
+          width: auto;
+        }
+        >span{
+          display:inline-block;
+        }
+      }
+    }
+  }
+  @media(min-width:768px){
+    width:470px;
+  }
+  @media(min-width:991px){
+    width:705px;
+  }
+  @media(min-width:1200px){
+    width:940px;
+  }
 }
 
 .map-container {

@@ -127,7 +127,38 @@ layout: default
   </a>
 </div>
 
-<br>
-<hr>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8 col-sm-push-2">
+      <div class="text-center">
+        <h2>Take up the challenge</h2>
+        <p>No matter what your role, we actively encourage motivated, intelligent and capable people who have a passion to transform the customer care industry.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-{% include map.html %}
+<div class="tab-panel" id="tab-footer">
+  <ul class="nav-footer nav nav-pills">
+    <li class="active"><a href="#team-icon" data-toggle="tab">By Team</a></li>
+    <li><a href="#map" data-toggle="tab">By Location</a></li>
+  </ul>
+</div>
+
+<br>
+<div class="tab-content">
+  <div class="tab-pane fade in active text-center" id="team-icon">
+    {% include team-icon.html %}
+    <div class="text-center">
+      <a href="{{site.baseurl}}/team" class="btn btn-primary">View all openings by Team</a>
+    </div>  
+  </div>
+  <div class="tab-pane fade" id="map">
+    {% include map.html %}
+    <br>
+    <div class="text-center">
+      <a href="{{site.baseurl}}/location" class="btn btn-primary">View all openings by Location</a>
+    </div>
+  </div>
+</div>
+
