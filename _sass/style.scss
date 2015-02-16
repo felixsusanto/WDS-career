@@ -34,12 +34,20 @@ a:hover{
       a{
         color:orange;
         @include text-shadow(0 -2px 0 tint(orange,50%),0 2px 0 darken(orange,30%));
+        
         &:hover,&:focus{
           color:tint(orange,20%);
         }
         @media(min-width:990px){
           font-size:1.5em;
         }
+
+        .disabled{
+          $disable: #5c6369;
+          color: $disable;
+          @include text-shadow(0 -2px 0 tint($disable,50%),0 2px 0 darken($disable,30%));
+        }
+
       }
       &#au{
         top:81%;
@@ -72,7 +80,7 @@ a:hover{
     }
   }
   .veil{
-    background:rgba(black,0.9);
+    background:rgba(black,0.8);
   }
   .map-text{
     padding:0 15px;
