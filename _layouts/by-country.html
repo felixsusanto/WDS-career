@@ -15,7 +15,7 @@ layout: default
 
       <h1>Openings in {{page.country}}</h1>
       
-      <p class="lead">{{page.content}}</p>
+      <p class="lead text-muted">{{page.content}}</p>
       <hr>
       {% include country-dropdown.html %}
 
@@ -36,7 +36,20 @@ layout: default
           {% endif %}
         {% endfor %}
       </ul>
-      
+
+
+      {% for job in site.posts %}
+        {%if job.country == country %}
+          {% assign countryMatch = true %}
+          {% break %}
+        {% else %}
+          {% assign countryMatch = false %}
+        {% endif %}
+      {% endfor %}
+
+      {% if countryMatch == false %}
+        {% include job-not-found.html param=country %}
+      {% endif %}
 
       {% include info.html %}
 

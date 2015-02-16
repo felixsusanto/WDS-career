@@ -1,0 +1,62 @@
+{% for data in site.data.countries %}
+  {{data.country}}
+  {% for jobInCountry in site.posts%}
+    {% if jobInCountry.country == data.country %}
+      {% assign {{data.country}}-countryOpening = true %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+
+<div class="map-container">
+  <img class="map-img img-responsive" src="img/map.png" alt="map of the world">
+  <div class="veil visible-xs"></div>
+  <div class="map-pin-container hidden-xs">
+    <div class="pin" id="au">
+      <a href="{{site.baseurl}}/location/au.html" data-toggle="tooltip" data-placement="top" title="Australia">
+        <i class="fa fa-map-marker fa-fw fa-lg"></i>
+      </a>
+    </div><!-- /.pin -->
+    <div class="pin" id="in">
+      <a href="{{site.baseurl}}/location/in.html" data-toggle="tooltip" data-placement="top" title="India">
+        <i class="fa fa-map-marker fa-fw fa-lg"></i>
+      </a>
+    </div><!-- /.pin -->
+    <div class="pin" id="nz">
+      <a href="{{site.baseurl}}/location/nz.html" data-toggle="tooltip" data-placement="top" title="New Zealand">
+        <i class="fa fa-map-marker fa-fw fa-lg"></i>
+      </a>
+    </div><!-- /.pin -->
+    <div class="pin" id="sg">
+      <a href="{{site.baseurl}}/location/sg.html" data-toggle="tooltip" data-placement="top" title="Singapore">
+        <i class="fa fa-map-marker fa-fw fa-lg"></i>
+      </a>
+    </div><!-- /.pin -->
+    <div class="pin" id="za">
+      <a href="{{site.baseurl}}/location/za.html" data-toggle="tooltip" data-placement="top" title="South Africa">
+        <i class="fa fa-map-marker fa-fw fa-lg"></i>
+      </a>
+    </div><!-- /.pin -->
+    <div class="pin" id="uk">
+      <a href="{{site.baseurl}}/location/uk.html" data-toggle="tooltip" data-placement="top" title="United Kingdom">
+        <i class="fa fa-map-marker fa-fw fa-lg"></i>
+      </a>
+    </div><!-- /.pin -->
+    <div class="pin" id="us">
+      <a href="{{site.baseurl}}/location/us.html" data-toggle="tooltip" data-placement="top" title="United States">
+        <i class="fa fa-map-marker fa-fw fa-lg"></i>
+      </a>
+    </div><!-- /.pin -->
+  </div>
+  <div class="map-text visible-xs">
+    <ul class="list-unstyled text-center">
+      <li><a href="{{site.baseurl}}/location/au.html" class="disabled">Australia</a></li>
+      <li><a href="{{site.baseurl}}/location/in.html">India</a></li>
+      <li><a href="{{site.baseurl}}/location/nz.html">New Zealand</a></li>
+      <li><a href="{{site.baseurl}}/location/sg.html">Singapore</a></li>
+      <li><a href="{{site.baseurl}}/location/za.html">South Africa</a></li>
+      <li><a href="{{site.baseurl}}/location/uk.html">United Kingdom</a></li>
+      <li><a href="{{site.baseurl}}/location/us.html">United States</a></li>
+    </ul>
+  </div>
+</div>
