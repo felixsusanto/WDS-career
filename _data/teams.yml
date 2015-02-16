@@ -1,9 +1,9 @@
 ---
 - { team: Accounting/Finance,      url: accounting.html}
-- { team: Administration,          url: admin.html}
-- { team: Customer Service,        url: customer-svc.html}
+- { team: Administration,          url: administration.html}
+- { team: Customer Service,        url: customer-service.html}
 - { team: Executive,               url: executive.html}
-- { team: Human Resources,         url: human-res.html}
+- { team: Human Resources,         url: human-resources.html}
 - { team: Information Technology,  url: it.html}
 - { team: Legal,                   url: legal.html}
 - { team: Management,              url: management.html}

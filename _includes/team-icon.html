@@ -1,68 +1,121 @@
+{% assign acc = false %}
+{% assign adm = false %}
+{% assign csv = false %}
+{% assign exc = false %}
+{% assign hrs = false %}
+{% assign ite = false %}
+{% assign lgl = false %}
+{% assign mgm = false %}
+{% assign mkt = false %}
+{% assign ops = false %}
+{% assign sls = false %}
+
+{% for job in site.posts %}
+  {% case job.team %}
+    {% when 'Accounting' %}
+      {% assign acc = true %}
+    {% when 'Administration' %}
+      {% assign adm = true %}
+    {% when 'Customer Service' %}
+      {% assign csv = true %}
+    {% when 'Executive' %}
+      {% assign exc = true %}
+    {% when 'Human Resources' %}
+      {% assign hrs = true %}
+    {% when 'Information Technology' %}
+      {% assign ite = true %}
+    {% when 'Legal' %}
+      {% assign lgl = true %}
+    {% when 'Management' %}
+      {% assign mgm = true %}
+    {% when 'Marketing' %}
+      {% assign mkt = true %}
+    {% when 'Operations' %}
+      {% assign ops = true %}
+    {% when 'Sales' %}
+      {% assign sls = true %}
+    {% else %}
+       
+  {% endcase %}
+
+{% endfor %}
+
 <ul class="team-icon-container list-unstyled clearfix">
   <li>
-    <a href="#">
-      <img src="http://placehold.it/135" class="img-circle" alt="icon">
+    <a href="{{site.baseurl}}/team/accounting.html" class="{% if acc == false %}disabled{% endif %}">
+      <img src="{{site.baseurl}}/img/icons/example2.jpg" class="img-circle" alt="icon">
+      <span>Accounting Finance</span>
+      <span class="label label-warning">No-Openings</span> 
+    </a>
+  </li>
+  <li>
+    <a href="{{site.baseurl}}/team/administration.html" class="{% if adm == false %}disabled{% endif %}">
+      <img src="{{site.baseurl}}/img/icons/example1.jpg" class="img-circle" alt="icon">
       <span>Administration</span>
+      <span class="label label-warning">No-Openings</span>
     </a>
   </li>
   <li>
-    <a href="#">
-      <img src="http://placehold.it/135" class="img-circle" alt="icon">
-      <span>Accounting Finance</span> 
+    <a href="{{site.baseurl}}/team/customer-service.html" class="{% if csv == false %}disabled{% endif %}">
+      <img src="{{site.baseurl}}/img/icons/example3.png" class="img-circle" alt="icon">
+      <span>Customer Service</span>
+      <span class="label label-warning">No-Openings</span> 
     </a>
   </li>
   <li>
-    <a href="#">
-      <img src="http://placehold.it/135" class="img-circle" alt="icon">
-      <span>Customer Service</span> 
-    </a>
-  </li>
-  <li>
-    <a href="#">
-      <img src="http://placehold.it/135" class="img-circle" alt="icon">
+    <a href="{{site.baseurl}}/team/executive.html" class="{% if exc == false %}disabled{% endif %}">
+      <img src="{{site.baseurl}}/img/icons/example4.png" class="img-circle" alt="icon">
       <span>Executive</span>
+      <span class="label label-warning">No-Openings</span>
     </a>
   </li>
   <li>
-    <a href="#">
-      <img src="http://placehold.it/135" class="img-circle" alt="icon">
-      <span>Management</span>
+    <a href="{{site.baseurl}}/team/human-resources.html" class="{% if hrs == false %}disabled{% endif %}">
+      <img src="{{site.baseurl}}/img/icons/example1.jpg" class="img-circle" alt="icon">
+      <span>Human Resources</span>
+      <span class="label label-warning">No-Openings</span> 
     </a>
   </li>
   <li>
-    <a href="#">
-      <img src="http://placehold.it/135" class="img-circle" alt="icon">
-      <span>Human Resources</span> 
+    <a href="{{site.baseurl}}/team/it.html" class="{% if ite == false %}disabled{% endif %}">
+      <img src="{{site.baseurl}}/img/icons/example2.jpg" class="img-circle" alt="icon">
+      <span>Information Technology</span>
+      <span class="label label-warning">No-Openings</span> 
     </a>
   </li>
   <li>
-    <a href="#">
-      <img src="http://placehold.it/135" class="img-circle" alt="icon">
-      <span>Information Technology</span> 
-    </a>
-  </li>
-  <li>
-    <a href="#">
-      <img src="http://placehold.it/135" class="img-circle" alt="icon">
+    <a href="{{site.baseurl}}/team/legal.html" class="{% if lgl == false %}disabled{% endif %}">
+      <img src="{{site.baseurl}}/img/icons/example3.png" class="img-circle" alt="icon">
       <span>Legal</span>
+      <span class="label label-warning">No-Openings</span>
     </a>
   </li>
   <li>
-    <a href="#">
-      <img src="http://placehold.it/135" class="img-circle" alt="icon">
+    <a href="{{site.baseurl}}/team/management.html" class="{% if mgm == false %}disabled{% endif %}">
+      <img src="{{site.baseurl}}/img/icons/example5.jpg" class="img-circle" alt="icon">
+      <span>Management</span>
+      <span class="label label-warning">No-Openings</span>
+    </a>
+  </li>
+  <li>
+    <a href="{{site.baseurl}}/team/marketing.html" class="{% if mkt == false %}disabled{% endif %}">
+      <img src="{{site.baseurl}}/img/icons/example4.png" class="img-circle" alt="icon">
       <span>Marketing</span>
+      <span class="label label-warning">No-Openings</span>
     </a>
   </li>
   <li>
-    <a href="#">
-      <img src="http://placehold.it/135" class="img-circle" alt="icon">
+    <a href="{{site.baseurl}}/team/operations.html" class="{% if ops == false %}disabled{% endif %}">
+      <img src="{{site.baseurl}}/img/icons/example5.jpg" class="img-circle" alt="icon">
       <span>Operations</span>
+      <span class="label label-warning">No-Openings</span>
     </a>
   </li>
   <li>
-    <a href="#">
-      <img src="http://placehold.it/135" class="img-circle" alt="icon">
+    <a href="{{site.baseurl}}/team/sales.html" class="{% if sls == false %}disabled{% endif %}">
+      <img src="{{site.baseurl}}/img/icons/example1.jpg" class="img-circle" alt="icon">
       <span>Sales</span>
+      <span class="label label-warning">No-Openings</span>
     </a>
   </li>
 </ul>

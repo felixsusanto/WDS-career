@@ -34,6 +34,18 @@ layout: default
         {% endfor %}
       </ul>
       
+      {% for job in site.posts %}
+        {%if job.team == team %}
+          {% assign teamMatch = true %}
+          {% break %}
+        {% else %}
+          {% assign teamMatch = false %}
+        {% endif %}
+      {% endfor %}
+
+      {% if teamMatch == false %}
+        {% include job-not-found.html param=team %}
+      {% endif %}
 
       {% include info.html %}
 

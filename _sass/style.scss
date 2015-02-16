@@ -16,7 +16,7 @@
     display:inline-block;
   }
 }
-a:hover{
+a:hover, a:focus{
   text-decoration: none;
 }
 
@@ -24,9 +24,15 @@ a:hover{
   display:inline-block;
   width: 470px;
   text-align: left;
+  .label{
+    display:none;
+    font-size:14px;
+    text-transform: none;
+    font-weight: lighter;
+  }
   >li{
     width:235px;
-    height:195px;
+    height:225px;
     display:inline-block;
     vertical-align: top;
     text-align: center;
@@ -36,6 +42,14 @@ a:hover{
       text-transform: uppercase;
       >span{
         display:block;
+      }
+      &.disabled{
+        $disabled:#95a5a6;
+        color:$disabled;
+        @include opacity(0.5);
+        .label{
+          display:inline;
+        }
       }
     }
   }
@@ -100,10 +114,11 @@ a:hover{
           font-size:1.5em;
         }
 
-        .disabled{
+        &.disabled{
           $disable: #5c6369;
           color: $disable;
           @include text-shadow(0 -2px 0 tint($disable,50%),0 2px 0 darken($disable,30%));
+          //pointer-events:none;
         }
 
       }
