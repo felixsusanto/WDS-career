@@ -80,7 +80,8 @@ a:hover{
     }
   }
   .veil{
-    background:rgba(black,0.8);
+    background:#000;
+    @include opacity(0.8);
   }
   .map-text{
     padding:0 15px;
