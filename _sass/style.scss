@@ -118,6 +118,7 @@ a:hover, a:focus{
 }
 
 .map-container {
+  min-height:220px;
   position:relative;
   .veil, .map-pin-container{
     height: 100%;
