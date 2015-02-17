@@ -4,6 +4,20 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "../bower_components/fontawesome/scss/font-awesome.scss";
 
+body{
+  position:relative;
+}
+
+.header-image{
+  background-color:#eaeaea;
+  height:230px;
+  background-repeat:repeat-x;
+  @media(max-width:767px){
+    height:115px;
+    background-size: auto 115px;
+  }
+}
+
 .wds-logo{
   height:54px;
   position:relative;
@@ -20,10 +34,18 @@ a:hover, a:focus{
   text-decoration: none;
 }
 
+.team-icon-container-parent{
+  background:#F9FAFA;
+  padding-top:20px;
+}
+
 .team-icon-container{
   display:inline-block;
   width: 470px;
   text-align: left;
+  i.fa{
+    display:none;
+  }
   .label{
     display:none;
     font-size:14px;
@@ -45,12 +67,21 @@ a:hover, a:focus{
       }
       &.disabled{
         $disabled:#95a5a6;
+        pointer-events:none;
         color:$disabled;
         @include opacity(0.5);
         .label{
           display:inline;
         }
       }
+    }
+  }
+  @media(max-width:370px){
+    i.fa{
+      display:inline;
+    }
+    .hidden-xxs{
+      display:none;
     }
   }
   @media(max-width:500px){
@@ -88,10 +119,6 @@ a:hover, a:focus{
 
 .map-container {
   position:relative;
-  //background:url(../img/map.png) center center no-repeat;
-  .map-img{
-    
-  }
   .veil, .map-pin-container{
     height: 100%;
     width: 100%;
@@ -157,13 +184,28 @@ a:hover, a:focus{
     @include opacity(0.8);
   }
   .map-text{
+    width: 100%;
     padding:0 15px;
     position:absolute;
     top:50%;
     left:50%;
     @include transform(translate(-50%, -50%));
-    width: 100%;
-
+    span.label{
+      display:none;
+    }
+    li.disabled{
+      a{
+        $color:#939393;
+        color:$color;
+        pointer-events:none;
+        &:hover,&:focus{
+          color:$color;
+        }
+      }
+      .label{
+        display:inline;
+      }
+    }
     a:hover, a:focus{
       color:#fff;
     }
@@ -172,11 +214,12 @@ a:hover, a:focus{
 
 .social-widget{
   $dimension: 1.7em;
-  $color1:#3498db;
-  $color2:#e67e22;
-  $color3:#e74c3c;
-  $color4:#9b59b6;
+  $color1:#00ACED;
+  $color2:#3B5998;
+  $color3:#007FB1;
+  $color4:#787878;
   position:fixed;
+  top:100px;
   z-index:9999;
   width: $dimension;
   a{
@@ -246,10 +289,9 @@ a:hover, a:focus{
 }
 
 .jumbo{
-  
-
+  padding-top:50px;
   &.jumbo-top{
-    background:url(../img/ofc-06.jpg) center center no-repeat;
+    background:url(../img/front/ofc-06.jpg) center center no-repeat;
     color:#fff;
     @include text-shadow(0 2px 5px black);
     background-size:cover;
@@ -260,10 +302,13 @@ a:hover, a:focus{
     }
   }
   &.jumbo-two{
-    background:url(../img/img-07.png) center bottom no-repeat;
+    background:url(../img/front/img-07.png) center bottom no-repeat;
     background-size:cover;
-    padding-top:50px;
     padding-bottom:30%;
+  }
+  &.jumbo-three{
+    background:#5D6D7E;
+    color:#fff;
   }
 }
 

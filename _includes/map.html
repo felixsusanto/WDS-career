@@ -29,7 +29,7 @@
 {% endfor %}
 
 <div class="map-container">
-  <img class="map-img img-responsive" src="img/map.png" alt="map of the world">
+  <img class="map-img img-responsive" src="{{site.baseurl}}/img/front/map.png" alt="map of the world">
   <div class="veil visible-xs"></div>
   <div class="map-pin-container hidden-xs">
     <div class="pin" id="au">
@@ -70,33 +70,33 @@
   </div>
   <div class="map-text visible-xs">
     <ul class="list-unstyled text-center">
-      <li>
+      <li class="{% if au == false %}disabled{% endif %}">
         <a href="{{site.baseurl}}/location/au.html">Australia</a>
-        {% if au == false %}<span class="label label-warning">no-openings</span>{% endif %}
+        <span class="label label-warning">no-openings</span>
       </li>
-      <li>
+      <li class="{% if ind == false %}disabled{% endif %}">
         <a href="{{site.baseurl}}/location/in.html">India</a>
-        {% if ind == false %}<span class="label label-warning">no-openings</span>{% endif %}
+        <span class="label label-warning">no-openings</span>
       </li>
-      <li>
+      <li class="{% if nz == false %}disabled{% endif %}">
         <a href="{{site.baseurl}}/location/nz.html">New Zealand</a>
-        {% if nz == false %}<span class="label label-warning">no-openings</span>{% endif %}
+        <span class="label label-warning">no-openings</span>
       </li>
-      <li>
+      <li class="{% if sg == false %}disabled{% endif %}">
         <a href="{{site.baseurl}}/location/sg.html">Singapore</a>
-        {% if sg == false %}<span class="label label-warning">no-openings</span>{% endif %}
+        <span class="label label-warning">no-openings</span>
       </li>
-      <li>
+      <li class="{% if za == false %}disabled{% endif %}">
         <a href="{{site.baseurl}}/location/za.html">South Africa</a>
-        {% if za == false %}<span class="label label-warning">no-openings</span>{% endif %}
+        <span class="label label-warning">no-openings</span>
       </li>
-      <li>
+      <li class="{% if uk == false %}disabled{% endif %}">
         <a href="{{site.baseurl}}/location/uk.html">United Kingdom</a>
-        {% if uk == false %}<span class="label label-warning">no-openings</span>{% endif %}
+        <span class="label label-warning">no-openings</span>
       </li>
-      <li>
+      <li class="{% if us == false %}disabled{% endif %}">
         <a href="{{site.baseurl}}/location/us.html">United States</a>
-        {% if us == false %}<span class="label label-warning">no-openings</span>{% endif %}
+        <span class="label label-warning">no-openings</span>
       </li>
     </ul>
   </div>
