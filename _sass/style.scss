@@ -132,11 +132,12 @@ a:hover, a:focus{
       position: absolute;
       @include transform(translate(-50%, -100%));
       a{
-        color:orange;
-        @include text-shadow(0 -2px 0 tint(orange,50%),0 2px 0 darken(orange,30%));
+        $color-of-pin:#d35400;
+        color:$color-of-pin;
+        @include text-shadow(0 -2px 0 tint($color-of-pin,50%),0 2px 0 darken($color-of-pin,30%));
         
         &:hover,&:focus{
-          color:tint(orange,20%);
+          color:tint($color-of-pin,20%);
         }
         @media(min-width:990px){
           font-size:1.5em;
