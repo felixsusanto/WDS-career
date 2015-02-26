@@ -13,8 +13,11 @@ layout: non-front
         <li><a href="{{site.baseurl}}/team">Browse by Team</a></li>
         <li class="active">{{page.team}}</li>
       </ol>
-
-      <h1>Openings in {{team}}</h1>
+      <div class="head-icon-container">
+        <img class="img-circle icon-team" src="{{site.baseurl}}{{page.iconurl}}" alt="team icon">
+        <h1>Openings in {{team}}</h1>
+      </div>
+      
       
       <p class="lead text-muted">{{page.content}}</p>
       <hr>

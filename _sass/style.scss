@@ -18,6 +18,29 @@ body{
   }
 }
 
+.head-icon-container{
+  position:relative;
+  padding-left:88px;
+  min-height:64px;
+  .icon-team{
+    height:68px;
+    position:absolute;
+    left:0;
+    top:0;
+  }
+  >h1{
+    padding-top: 9px;
+  }
+  @media(max-width:480px){
+    padding-left:0;
+    .icon-team{
+      position:static;
+      display:block;
+    }
+    
+  }
+}
+
 .wds-logo{
   height:54px;
   position:relative;
