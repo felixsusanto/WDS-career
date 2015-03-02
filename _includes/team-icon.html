@@ -1,7 +1,7 @@
-{% assign acc = false %}
 {% assign adm = false %}
 {% assign csv = false %}
 {% assign exc = false %}
+{% assign fin = false %}
 {% assign hrs = false %}
 {% assign ite = false %}
 {% assign lgl = false %}
@@ -12,14 +12,14 @@
 
 {% for job in site.posts %}
   {% case job.team %}
-    {% when 'Accounting' %}
-      {% assign acc = true %}
     {% when 'Administration' %}
       {% assign adm = true %}
     {% when 'Customer Service' %}
       {% assign csv = true %}
     {% when 'Executive' %}
       {% assign exc = true %}
+    {% when 'Finance' %}
+      {% assign fin = true %}
     {% when 'Human Resources' %}
       {% assign hrs = true %}
     {% when 'Information Technology' %}
@@ -41,18 +41,6 @@
 {% endfor %}
 
 <ul class="team-icon-container list-unstyled clearfix">
-  <li>
-    <a href="{{site.baseurl}}/team/accounting.html" class="{% if acc == false %}disabled{% endif %}">
-      <!-- IMAGE HERE -->
-      <img src="{{site.baseurl}}/img/icons/acc.jpg" class="img-circle" alt="icon">
-      
-      <span>Accounting Finance</span>
-      <span class="label label-warning">
-        <i class="fa fa-ban"></i>
-        <span class="hidden-xxs">No-Openings</span> 
-      </span> 
-    </a>
-  </li>
   <li>
     <a href="{{site.baseurl}}/team/administration.html" class="{% if adm == false %}disabled{% endif %}">
       <img src="{{site.baseurl}}/img/icons/adm.jpg" class="img-circle" alt="icon">
@@ -81,6 +69,16 @@
         <i class="fa fa-ban"></i>
         <span class="hidden-xxs">No-Openings</span> 
       </span>
+    </a>
+  </li>
+  <li>
+    <a href="{{site.baseurl}}/team/finance.html" class="{% if fin == false %}disabled{% endif %}">
+      <img src="{{site.baseurl}}/img/icons/fin.jpg" class="img-circle" alt="icon">
+      <span>Finance</span>
+      <span class="label label-warning">
+        <i class="fa fa-ban"></i>
+        <span class="hidden-xxs">No-Openings</span> 
+      </span> 
     </a>
   </li>
   <li>

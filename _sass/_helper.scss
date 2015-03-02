@@ -1,0 +1,12 @@
+.grid-container{
+  $color: rgba(255,0,0,0.05);
+  position:absolute;
+  width: 100%;
+  .grid{
+    text-align: center;
+    outline:1px solid $color;
+    background: $color;
+    background-clip:content-box;
+    height:100vh;
+  }
+}

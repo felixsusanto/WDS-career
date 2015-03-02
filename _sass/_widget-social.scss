@@ -1,0 +1,41 @@
+/*SOCIAL*/
+.social-widget{
+  $dimension: 1.7em;
+  $color1:#00ACED;
+  $color2:#3B5998;
+  $color3:#007FB1;
+  $color4:#787878;
+  position:fixed;
+  top:100px;
+  z-index:9999;
+  width: $dimension;
+  a{
+    color:#fff;
+    background:$color1;
+    width:$dimension;
+    line-height:$dimension;
+    float:left;
+    &:hover{
+      text-decoration: none;
+      background:tint($color1,10%);
+    }
+    &:nth-child(n+2){
+      background:$color2;
+      &:hover{
+        background:tint($color2,10%);
+      }
+    }
+    &:nth-child(n+3){
+      background:$color3;
+      &:hover{
+        background:tint($color3,10%);
+      }
+    }
+    &:nth-child(n+4){
+      background:$color4;
+      &:hover{
+        background:tint($color4,10%);
+      }
+    }
+  }
+}

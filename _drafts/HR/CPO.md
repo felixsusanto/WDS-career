@@ -1,6 +1,6 @@
 ---
 title: job-title
-team: Operations
+team: Human Resources
 city: 
 country: 
 categories: [location, 2character-country, city]

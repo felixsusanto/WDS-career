@@ -1,0 +1,97 @@
+/* MAP */
+.map-container {
+  min-height:220px;
+  position:relative;
+  .veil, .map-pin-container{
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+  }
+  .map-pin-container{
+    .pin{
+      position: absolute;
+      @include transform(translate(-50%, -100%));
+      a{
+        $color-of-pin:#d35400;
+        color:$color-of-pin;
+        @include text-shadow(0 -2px 0 tint($color-of-pin,50%),0 2px 0 darken($color-of-pin,30%));
+        
+        &:hover,&:focus{
+          color:tint($color-of-pin,20%);
+        }
+        @media(min-width:990px){
+          font-size:1.5em;
+        }
+
+        &.disabled{
+          $disable: #5c6369;
+          color: $disable;
+          @include text-shadow(0 -2px 0 tint($disable,50%),0 2px 0 darken($disable,30%));
+          //pointer-events:none;
+        }
+
+      }
+      &#au{
+        top:81%;
+        left:86%;
+      }
+      &#in{
+        top:61%;
+        left:66.5%;
+      }
+      &#nz{
+        top:89%;
+        left:90.5%;
+      }
+      &#sg{
+        top:66.2%;
+        left:73.3%;
+      }
+      &#za{
+        top:82.2%;
+        left:52.3%;
+      }
+      &#uk{
+        top:37%;
+        left:45.8%;
+      }
+      &#us{
+        top:49%;
+        left:20%;
+      }
+    }
+  }
+  .veil{
+    background:#000;
+    @include opacity(0.8);
+  }
+  .map-text{
+    width: 100%;
+    padding:0 15px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    @include transform(translate(-50%, -50%));
+    span.label{
+      display:none;
+    }
+    li.disabled{
+      a{
+        $color:#939393;
+        color:$color;
+        pointer-events:none;
+        &:hover,&:focus{
+          color:$color;
+        }
+      }
+      .label{
+        display:inline;
+      }
+    }
+    a:hover, a:focus{
+      color:#fff;
+    }
+  }
+}

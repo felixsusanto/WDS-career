@@ -1,6 +1,6 @@
 ---
 title: job-title
-team: Operations
+team: Finance
 city: 
 country: 
 categories: [location, 2character-country, city]
